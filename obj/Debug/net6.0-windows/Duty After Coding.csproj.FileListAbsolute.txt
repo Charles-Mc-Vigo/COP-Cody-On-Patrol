@@ -1,0 +1,18 @@
+C:\Users\Charles Mc\Desktop\Final Project (CGP)\Duty After Coding\bin\Debug\net6.0-windows\Duty After Coding.exe
+C:\Users\Charles Mc\Desktop\Final Project (CGP)\Duty After Coding\bin\Debug\net6.0-windows\Duty After Coding.deps.json
+C:\Users\Charles Mc\Desktop\Final Project (CGP)\Duty After Coding\bin\Debug\net6.0-windows\Duty After Coding.runtimeconfig.json
+C:\Users\Charles Mc\Desktop\Final Project (CGP)\Duty After Coding\bin\Debug\net6.0-windows\Duty After Coding.dll
+C:\Users\Charles Mc\Desktop\Final Project (CGP)\Duty After Coding\bin\Debug\net6.0-windows\Duty After Coding.pdb
+C:\Users\Charles Mc\Desktop\Final Project (CGP)\Duty After Coding\obj\Debug\net6.0-windows\Duty After Coding.csproj.AssemblyReference.cache
+C:\Users\Charles Mc\Desktop\Final Project (CGP)\Duty After Coding\obj\Debug\net6.0-windows\Duty_After_Coding.Form1.resources
+C:\Users\Charles Mc\Desktop\Final Project (CGP)\Duty After Coding\obj\Debug\net6.0-windows\Duty_After_Coding.Properties.Resources.resources
+C:\Users\Charles Mc\Desktop\Final Project (CGP)\Duty After Coding\obj\Debug\net6.0-windows\Duty After Coding.csproj.GenerateResource.cache
+C:\Users\Charles Mc\Desktop\Final Project (CGP)\Duty After Coding\obj\Debug\net6.0-windows\Duty After Coding.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Charles Mc\Desktop\Final Project (CGP)\Duty After Coding\obj\Debug\net6.0-windows\Duty After Coding.AssemblyInfoInputs.cache
+C:\Users\Charles Mc\Desktop\Final Project (CGP)\Duty After Coding\obj\Debug\net6.0-windows\Duty After Coding.AssemblyInfo.cs
+C:\Users\Charles Mc\Desktop\Final Project (CGP)\Duty After Coding\obj\Debug\net6.0-windows\Duty After Coding.csproj.CoreCompileInputs.cache
+C:\Users\Charles Mc\Desktop\Final Project (CGP)\Duty After Coding\obj\Debug\net6.0-windows\Duty After Coding.dll
+C:\Users\Charles Mc\Desktop\Final Project (CGP)\Duty After Coding\obj\Debug\net6.0-windows\refint\Duty After Coding.dll
+C:\Users\Charles Mc\Desktop\Final Project (CGP)\Duty After Coding\obj\Debug\net6.0-windows\Duty After Coding.pdb
+C:\Users\Charles Mc\Desktop\Final Project (CGP)\Duty After Coding\obj\Debug\net6.0-windows\Duty After Coding.genruntimeconfig.cache
+C:\Users\Charles Mc\Desktop\Final Project (CGP)\Duty After Coding\obj\Debug\net6.0-windows\ref\Duty After Coding.dll
