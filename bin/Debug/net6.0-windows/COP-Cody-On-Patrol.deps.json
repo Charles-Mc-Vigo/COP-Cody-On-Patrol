@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "COP-Cody-On-Patrol/1.0.0": {
+        "runtime": {
+          "COP-Cody-On-Patrol.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "COP-Cody-On-Patrol/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

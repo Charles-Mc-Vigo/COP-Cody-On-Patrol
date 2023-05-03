@@ -48,7 +48,7 @@
             // 
             gunner.BackColor = Color.Transparent;
             gunner.Image = Properties.Resources.shooting_instance_2;
-            gunner.Location = new Point(228, 401);
+            gunner.Location = new Point(221, 403);
             gunner.Name = "gunner";
             gunner.Size = new Size(67, 98);
             gunner.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -89,9 +89,9 @@
             // 
             fence.BackColor = Color.Transparent;
             fence.Image = Properties.Resources.w;
-            fence.Location = new Point(0, 342);
+            fence.Location = new Point(195, 368);
             fence.Name = "fence";
-            fence.Size = new Size(174, 73);
+            fence.Size = new Size(125, 47);
             fence.SizeMode = PictureBoxSizeMode.StretchImage;
             fence.TabIndex = 3;
             fence.TabStop = false;
@@ -101,9 +101,9 @@
             // 
             pictureBox2.BackColor = Color.Transparent;
             pictureBox2.Image = Properties.Resources.w;
-            pictureBox2.Location = new Point(171, 345);
+            pictureBox2.Location = new Point(23, 366);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(174, 73);
+            pictureBox2.Size = new Size(125, 47);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 4;
             pictureBox2.TabStop = false;
@@ -113,9 +113,9 @@
             // 
             pictureBox3.BackColor = Color.Transparent;
             pictureBox3.Image = Properties.Resources.w;
-            pictureBox3.Location = new Point(336, 344);
+            pictureBox3.Location = new Point(360, 367);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(146, 73);
+            pictureBox3.Size = new Size(97, 47);
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.TabIndex = 5;
             pictureBox3.TabStop = false;

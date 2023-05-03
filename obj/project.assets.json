@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Charles Mc\\Desktop\\Final Project (CGP)\\Duty After Coding\\Duty After Coding.csproj",
-      "projectName": "Duty After Coding",
-      "projectPath": "C:\\Users\\Charles Mc\\Desktop\\Final Project (CGP)\\Duty After Coding\\Duty After Coding.csproj",
+      "projectUniqueName": "C:\\Users\\Charles Mc\\Desktop\\Final Project (CGP)\\Duty After Coding\\COP-Cody-On-Patrol.csproj",
+      "projectName": "COP-Cody-On-Patrol",
+      "projectPath": "C:\\Users\\Charles Mc\\Desktop\\Final Project (CGP)\\Duty After Coding\\COP-Cody-On-Patrol.csproj",
       "packagesPath": "C:\\Users\\Charles Mc\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Charles Mc\\Desktop\\Final Project (CGP)\\Duty After Coding\\obj\\",
       "projectStyle": "PackageReference",
