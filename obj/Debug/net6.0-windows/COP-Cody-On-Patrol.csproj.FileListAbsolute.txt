@@ -16,3 +16,22 @@ C:\Users\Charles Mc\Desktop\Final Project (CGP)\Duty After Coding\obj\Debug\net6
 C:\Users\Charles Mc\Desktop\Final Project (CGP)\Duty After Coding\obj\Debug\net6.0-windows\COP-Cody-On-Patrol.pdb
 C:\Users\Charles Mc\Desktop\Final Project (CGP)\Duty After Coding\obj\Debug\net6.0-windows\COP-Cody-On-Patrol.genruntimeconfig.cache
 C:\Users\Charles Mc\Desktop\Final Project (CGP)\Duty After Coding\obj\Debug\net6.0-windows\ref\COP-Cody-On-Patrol.dll
+C:\Users\Charles Mc\Desktop\Final Project (CGP)\COP-Cody-On-Patrol\bin\Debug\net6.0-windows\COP-Cody-On-Patrol.exe
+C:\Users\Charles Mc\Desktop\Final Project (CGP)\COP-Cody-On-Patrol\bin\Debug\net6.0-windows\COP-Cody-On-Patrol.deps.json
+C:\Users\Charles Mc\Desktop\Final Project (CGP)\COP-Cody-On-Patrol\bin\Debug\net6.0-windows\COP-Cody-On-Patrol.runtimeconfig.json
+C:\Users\Charles Mc\Desktop\Final Project (CGP)\COP-Cody-On-Patrol\bin\Debug\net6.0-windows\COP-Cody-On-Patrol.dll
+C:\Users\Charles Mc\Desktop\Final Project (CGP)\COP-Cody-On-Patrol\bin\Debug\net6.0-windows\COP-Cody-On-Patrol.pdb
+C:\Users\Charles Mc\Desktop\Final Project (CGP)\COP-Cody-On-Patrol\obj\Debug\net6.0-windows\COP-Cody-On-Patrol.csproj.AssemblyReference.cache
+C:\Users\Charles Mc\Desktop\Final Project (CGP)\COP-Cody-On-Patrol\obj\Debug\net6.0-windows\Duty_After_Coding.Form1.resources
+C:\Users\Charles Mc\Desktop\Final Project (CGP)\COP-Cody-On-Patrol\obj\Debug\net6.0-windows\Duty_After_Coding.Properties.Resources.resources
+C:\Users\Charles Mc\Desktop\Final Project (CGP)\COP-Cody-On-Patrol\obj\Debug\net6.0-windows\COP-Cody-On-Patrol.csproj.GenerateResource.cache
+C:\Users\Charles Mc\Desktop\Final Project (CGP)\COP-Cody-On-Patrol\obj\Debug\net6.0-windows\COP-Cody-On-Patrol.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Charles Mc\Desktop\Final Project (CGP)\COP-Cody-On-Patrol\obj\Debug\net6.0-windows\COP-Cody-On-Patrol.AssemblyInfoInputs.cache
+C:\Users\Charles Mc\Desktop\Final Project (CGP)\COP-Cody-On-Patrol\obj\Debug\net6.0-windows\COP-Cody-On-Patrol.AssemblyInfo.cs
+C:\Users\Charles Mc\Desktop\Final Project (CGP)\COP-Cody-On-Patrol\obj\Debug\net6.0-windows\COP-Cody-On-Patrol.csproj.CoreCompileInputs.cache
+C:\Users\Charles Mc\Desktop\Final Project (CGP)\COP-Cody-On-Patrol\obj\Debug\net6.0-windows\COP-Cody-On-Patrol.dll
+C:\Users\Charles Mc\Desktop\Final Project (CGP)\COP-Cody-On-Patrol\obj\Debug\net6.0-windows\refint\COP-Cody-On-Patrol.dll
+C:\Users\Charles Mc\Desktop\Final Project (CGP)\COP-Cody-On-Patrol\obj\Debug\net6.0-windows\COP-Cody-On-Patrol.pdb
+C:\Users\Charles Mc\Desktop\Final Project (CGP)\COP-Cody-On-Patrol\obj\Debug\net6.0-windows\COP-Cody-On-Patrol.genruntimeconfig.cache
+C:\Users\Charles Mc\Desktop\Final Project (CGP)\COP-Cody-On-Patrol\obj\Debug\net6.0-windows\ref\COP-Cody-On-Patrol.dll
+C:\Users\Charles Mc\Desktop\Final Project (CGP)\COP-Cody-On-Patrol\obj\Debug\net6.0-windows\Duty_After_Coding.loadingscreen.resources

@@ -36,12 +36,14 @@
             fence = new PictureBox();
             pictureBox2 = new PictureBox();
             pictureBox3 = new PictureBox();
+            bullet = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)gunner).BeginInit();
             ((System.ComponentModel.ISupportInitialize)zombies).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)fence).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bullet).BeginInit();
             SuspendLayout();
             // 
             // gunner
@@ -89,9 +91,9 @@
             // 
             fence.BackColor = Color.Transparent;
             fence.Image = Properties.Resources.w;
-            fence.Location = new Point(195, 368);
+            fence.Location = new Point(192, 340);
             fence.Name = "fence";
-            fence.Size = new Size(125, 47);
+            fence.Size = new Size(145, 75);
             fence.SizeMode = PictureBoxSizeMode.StretchImage;
             fence.TabIndex = 3;
             fence.TabStop = false;
@@ -101,9 +103,9 @@
             // 
             pictureBox2.BackColor = Color.Transparent;
             pictureBox2.Image = Properties.Resources.w;
-            pictureBox2.Location = new Point(23, 366);
+            pictureBox2.Location = new Point(20, 338);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(125, 47);
+            pictureBox2.Size = new Size(145, 75);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 4;
             pictureBox2.TabStop = false;
@@ -113,13 +115,25 @@
             // 
             pictureBox3.BackColor = Color.Transparent;
             pictureBox3.Image = Properties.Resources.w;
-            pictureBox3.Location = new Point(360, 367);
+            pictureBox3.Location = new Point(357, 339);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(97, 47);
+            pictureBox3.Size = new Size(117, 75);
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.TabIndex = 5;
             pictureBox3.TabStop = false;
             pictureBox3.Tag = "fence";
+            // 
+            // bullet
+            // 
+            bullet.BackColor = Color.Transparent;
+            bullet.Image = Properties.Resources.bullet;
+            bullet.Location = new Point(290, 446);
+            bullet.Name = "bullet";
+            bullet.Size = new Size(92, 23);
+            bullet.SizeMode = PictureBoxSizeMode.StretchImage;
+            bullet.TabIndex = 6;
+            bullet.TabStop = false;
+            bullet.Tag = "bullet";
             // 
             // Form1
             // 
@@ -128,6 +142,7 @@
             BackgroundImage = Properties.Resources.level1_background;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1484, 561);
+            Controls.Add(bullet);
             Controls.Add(pictureBox1);
             Controls.Add(zombies);
             Controls.Add(gunner);
@@ -151,6 +166,7 @@
             ((System.ComponentModel.ISupportInitialize)fence).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bullet).EndInit();
             ResumeLayout(false);
         }
 
@@ -163,5 +179,6 @@
         private PictureBox fence;
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;
+        private PictureBox bullet;
     }
 }

@@ -63,9 +63,29 @@ namespace Duty_After_Coding.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bullet {
+            get {
+                object obj = ResourceManager.GetObject("bullet", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap level1_background {
             get {
                 object obj = ResourceManager.GetObject("level1-background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap loadingimage3 {
+            get {
+                object obj = ResourceManager.GetObject("loadingimage3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -96,16 +116,6 @@ namespace Duty_After_Coding.Properties {
         internal static System.Drawing.Bitmap w {
             get {
                 object obj = ResourceManager.GetObject("w", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap zombie__dancing {
-            get {
-                object obj = ResourceManager.GetObject("zombie -dancing", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

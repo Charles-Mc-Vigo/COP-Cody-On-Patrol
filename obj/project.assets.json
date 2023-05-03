@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Charles Mc\\Desktop\\Final Project (CGP)\\Duty After Coding\\COP-Cody-On-Patrol.csproj",
+      "projectUniqueName": "C:\\Users\\Charles Mc\\Desktop\\Final Project (CGP)\\COP-Cody-On-Patrol\\COP-Cody-On-Patrol.csproj",
       "projectName": "COP-Cody-On-Patrol",
-      "projectPath": "C:\\Users\\Charles Mc\\Desktop\\Final Project (CGP)\\Duty After Coding\\COP-Cody-On-Patrol.csproj",
+      "projectPath": "C:\\Users\\Charles Mc\\Desktop\\Final Project (CGP)\\COP-Cody-On-Patrol\\COP-Cody-On-Patrol.csproj",
       "packagesPath": "C:\\Users\\Charles Mc\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Charles Mc\\Desktop\\Final Project (CGP)\\Duty After Coding\\obj\\",
+      "outputPath": "C:\\Users\\Charles Mc\\Desktop\\Final Project (CGP)\\COP-Cody-On-Patrol\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Charles Mc\\AppData\\Roaming\\NuGet\\NuGet.Config",
