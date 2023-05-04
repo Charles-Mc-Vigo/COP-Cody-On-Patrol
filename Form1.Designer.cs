@@ -44,6 +44,8 @@
             labelScore = new Label();
             wall = new PictureBox();
             healthBar = new ProgressBar();
+            pictureBox8 = new PictureBox();
+            pictureBox9 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)gunner).BeginInit();
             ((System.ComponentModel.ISupportInitialize)fence).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -56,6 +58,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)wall).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
             SuspendLayout();
             // 
             // gunner
@@ -79,7 +83,7 @@
             // 
             fence.BackColor = Color.Transparent;
             fence.Image = Properties.Resources.w;
-            fence.Location = new Point(557, 335);
+            fence.Location = new Point(508, 334);
             fence.Name = "fence";
             fence.Size = new Size(145, 75);
             fence.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -175,7 +179,7 @@
             // 
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.Image = Properties.Resources.zombie_left;
-            pictureBox1.Location = new Point(1415, 381);
+            pictureBox1.Location = new Point(1415, 363);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(69, 80);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -187,7 +191,7 @@
             // 
             pictureBox7.BackColor = Color.Transparent;
             pictureBox7.Image = Properties.Resources.zombie_left;
-            pictureBox7.Location = new Point(1415, 480);
+            pictureBox7.Location = new Point(1415, 485);
             pictureBox7.Name = "pictureBox7";
             pictureBox7.Size = new Size(69, 80);
             pictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -228,6 +232,30 @@
             healthBar.Tag = "healthBar";
             healthBar.Value = 100;
             // 
+            // pictureBox8
+            // 
+            pictureBox8.BackColor = Color.Transparent;
+            pictureBox8.Image = Properties.Resources.zombie_left;
+            pictureBox8.Location = new Point(1340, 381);
+            pictureBox8.Name = "pictureBox8";
+            pictureBox8.Size = new Size(69, 80);
+            pictureBox8.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox8.TabIndex = 16;
+            pictureBox8.TabStop = false;
+            pictureBox8.Tag = "zombie";
+            // 
+            // pictureBox9
+            // 
+            pictureBox9.BackColor = Color.Transparent;
+            pictureBox9.Image = Properties.Resources.zombie_left;
+            pictureBox9.Location = new Point(1368, 436);
+            pictureBox9.Name = "pictureBox9";
+            pictureBox9.Size = new Size(69, 80);
+            pictureBox9.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox9.TabIndex = 17;
+            pictureBox9.TabStop = false;
+            pictureBox9.Tag = "zombie";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 19F);
@@ -235,11 +263,13 @@
             BackgroundImage = Properties.Resources.level1_background;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1484, 561);
+            Controls.Add(pictureBox7);
+            Controls.Add(pictureBox9);
+            Controls.Add(pictureBox8);
             Controls.Add(healthBar);
             Controls.Add(wall);
             Controls.Add(labelScore);
             Controls.Add(bullet);
-            Controls.Add(pictureBox7);
             Controls.Add(pictureBox1);
             Controls.Add(wallDef);
             Controls.Add(gunner);
@@ -273,6 +303,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)wall).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -294,5 +326,7 @@
         private Label labelScore;
         private PictureBox wall;
         private ProgressBar healthBar;
+        private PictureBox pictureBox8;
+        private PictureBox pictureBox9;
     }
 }

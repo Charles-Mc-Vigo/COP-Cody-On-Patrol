@@ -3,10 +3,11 @@ namespace Duty_After_Coding
     public partial class Form1 : Form
     {
         //below are game variables
+        int score = 0;
         bool isShooting;
-        int zombieSpeed = 3;
+        int zombieSpeed = 5;
         int gunnerSpeed = 30;
-        int bulletSpeed = 200;
+        int bulletSpeed = 150;
         public Form1()
         {
             InitializeComponent();
@@ -44,7 +45,6 @@ namespace Duty_After_Coding
                 bullet.Visible = true;
                 bullet.Left = gunner.Left;
                 bullet.Top = gunner.Top + bullet.Width / 2;
-                shoot();
             }
         }
         private void keyIsUp(object sender, KeyEventArgs e)
@@ -66,10 +66,9 @@ namespace Duty_After_Coding
 
         public void shoot()
         {
-            if (isShooting == true && bullet.Left <= 1470)
+            if (isShooting == true && bullet.Left <= 1500)
             {
                 bullet.Left += bulletSpeed;
-                bullet.Top = gunner.Top + bullet.Width / 2;
                 gunner.Image = Properties.Resources.shooting_instance_2;
             }
         }
@@ -88,24 +87,47 @@ namespace Duty_After_Coding
 
         public void zombieMovement()
         {
-            foreach (Control x in this.Controls)
+            foreach (Control z in this.Controls)
             {
-                if (x is PictureBox && (string)x.Tag == "zombie")
+                if (z is PictureBox && (string)z.Tag == "zombie")
                 {
-                    x.Left -= zombieSpeed;
+                    if (z.Left > gunner.Left)
+                    {
+                        z.Left -= zombieSpeed;
+                    }
+                    if (z.Left < gunner.Left)
+                    {
+                        z.Left += zombieSpeed;
+                    }
+                    if (z.Top < gunner.Top)
+                    {
+                        z.Top += zombieSpeed;
+                    }
+                    if (z.Top > gunner.Top)
+                    {
+                        z.Top -= zombieSpeed;
+                    }
                 }
             }
         }
         public void scoring()
         {
-            foreach (Control x in this.Controls)
+            foreach (Control z in this.Controls)
             {
-                if (x is PictureBox && (string)x.Tag == "zombie")
+                if (z is PictureBox && (string)z.Tag == "zombie")
                 {
-                    if (bullet.Bounds.IntersectsWith(x.Bounds))
+                    if (bullet.Bounds.IntersectsWith(z.Bounds))
                     {
-                        x.Visible = false;
                         bullet.Visible = false;
+                        z.Visible = false;
+                        score++;
+                        labelScore.Text = $"Score : {score}";
+
+                        Random random = new Random();
+                        int y = random.Next(this.ClientSize.Height / 2, this.ClientSize.Height - z.Height);
+                        int x = random.Next(1450, 1500);
+                        z.Location = new Point(x, y);
+                        z.Visible=true;
                     }
                 }
             }
