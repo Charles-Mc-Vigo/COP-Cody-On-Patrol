@@ -2,87 +2,112 @@ namespace Duty_After_Coding
 {
     public partial class Form1 : Form
     {
-        bool goUp, goDown, isShooting;
-        int gunnerSpeed = 20;
-        int bulletSpeed = 150;
+        //below are game variables
+        bool isShooting;
+        int zombieSpeed = 3;
+        int gunnerSpeed = 30;
+        int bulletSpeed = 200;
         public Form1()
         {
             InitializeComponent();
         }
 
-        //controls if keys are holding or press
         private void keyIsDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Up)
             {
-                goUp = true;
+                gunner.Top -= gunnerSpeed;
                 gunner.Image = Properties.Resources.shooting_instances;
 
+                if (gunner.Top <= 330)
+                {
+                    gunner.Top += gunnerSpeed;
+                    bullet.Top = gunner.Top + bullet.Width / 2;
+                }
             }
 
             if (e.KeyCode == Keys.Down)
             {
-                goDown = true;
+                gunner.Top += gunnerSpeed;
                 gunner.Image = Properties.Resources.shooting_instances;
 
+                if (gunner.Top >= 470)
+                {
+                    gunner.Top -= gunnerSpeed;
+                    bullet.Top = gunner.Top + bullet.Width / 2;
+                }
             }
+
             if (e.KeyCode == Keys.Space)
             {
-                isShooting= true;
-                bullet.Left = gunner.Left + bullet.Width / 2;
-                bullet.Image = Properties.Resources.bullet;
-                gunner.Image = Properties.Resources.shooting_instances;
+                isShooting = true;
+                bullet.Visible = true;
+                bullet.Left = gunner.Left;
+                bullet.Top = gunner.Top + bullet.Width / 2;
+                shoot();
             }
         }
-
-        //controls if keys are release
         private void keyIsUp(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Up)
             {
-                goUp = false;
                 gunner.Image = Properties.Resources.shooting_instance_2;
             }
             if (e.KeyCode == Keys.Down)
             {
-                goDown = false;
                 gunner.Image = Properties.Resources.shooting_instance_2;
             }
             if (e.KeyCode == Keys.Space)
             {
-                bullet.Visible = true;
+                gunner.Image = Properties.Resources.shooting_instances;
+                isShooting = true;
+            }
+        }
+
+        public void shoot()
+        {
+            if (isShooting == true && bullet.Left <= 1470)
+            {
+                bullet.Left += bulletSpeed;
+                bullet.Top = gunner.Top + bullet.Width / 2;
                 gunner.Image = Properties.Resources.shooting_instance_2;
             }
         }
 
         private void gameTimer_Tick(object sender, EventArgs e)
         {
-            //Movement Up
-            if (goUp == true)
-            {
-                gunner.Top -= gunnerSpeed;
-            }
-            //Movement Down
-            if (goDown == true)
-            {
-                gunner.Top += gunnerSpeed;
-            }
-            //Movement Up Limit
-            if (goUp == true && gunner.Top <= 325)
-            {
-                goUp = false;
-                gunner.Top += gunnerSpeed;
-            }
-            //Movement Down Limit
-            if (goDown == true && gunner.Top >= 470)
-            {
-                goDown = false;
-                gunner.Top -= gunnerSpeed;
-            }
+            shoot();
+            zombieMovement();
+            scoring();
+        }
 
-            if (isShooting == true && bullet.Left < 1500)
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            bullet.Visible = false;
+        }
+
+        public void zombieMovement()
+        {
+            foreach (Control x in this.Controls)
             {
-                bullet.Left += bulletSpeed;
+                if (x is PictureBox && (string)x.Tag == "zombie")
+                {
+                    x.Left -= zombieSpeed;
+                }
+            }
+        }
+        public void scoring()
+        {
+            foreach (Control x in this.Controls)
+            {
+                if (x is PictureBox && (string)x.Tag == "zombie")
+                {
+                    if (bullet.Bounds.IntersectsWith(x.Bounds))
+                    {
+                        x.Visible = false;
+                        bullet.Visible = false;
+                    }
+                }
             }
         }
     }

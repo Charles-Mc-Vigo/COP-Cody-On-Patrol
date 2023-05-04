@@ -123,6 +123,16 @@ namespace Duty_After_Coding.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap wall_def {
+            get {
+                object obj = ResourceManager.GetObject("wall-def", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap zombie_left {
             get {
                 object obj = ResourceManager.GetObject("zombie_left", resourceCulture);

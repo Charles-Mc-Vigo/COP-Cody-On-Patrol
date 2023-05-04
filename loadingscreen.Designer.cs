@@ -38,7 +38,7 @@
             // Loading
             // 
             Loading.AutoSize = true;
-            Loading.BackColor = Color.DarkSlateGray;
+            Loading.BackColor = Color.Transparent;
             Loading.Font = new Font("Snap ITC", 21.75F, FontStyle.Bold, GraphicsUnit.Point);
             Loading.ForeColor = Color.GreenYellow;
             Loading.Location = new Point(490, 600);
