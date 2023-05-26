@@ -35,3 +35,5 @@ C:\Users\Charles Mc\Desktop\Final Project (CGP)\COP-Cody-On-Patrol\obj\Debug\net
 C:\Users\Charles Mc\Desktop\Final Project (CGP)\COP-Cody-On-Patrol\obj\Debug\net6.0-windows\COP-Cody-On-Patrol.genruntimeconfig.cache
 C:\Users\Charles Mc\Desktop\Final Project (CGP)\COP-Cody-On-Patrol\obj\Debug\net6.0-windows\ref\COP-Cody-On-Patrol.dll
 C:\Users\Charles Mc\Desktop\Final Project (CGP)\COP-Cody-On-Patrol\obj\Debug\net6.0-windows\Duty_After_Coding.loadingscreen.resources
+C:\Users\Charles Mc\Desktop\Final Project (CGP)\COP-Cody-On-Patrol\obj\Debug\net6.0-windows\Duty_After_Coding.Form2.resources
+C:\Users\Charles Mc\Desktop\Final Project (CGP)\COP-Cody-On-Patrol\obj\Debug\net6.0-windows\Duty_After_Coding.Form3.resources

@@ -35,40 +35,31 @@
             pictureBox2 = new PictureBox();
             pictureBox3 = new PictureBox();
             bullet = new PictureBox();
-            wallDef = new PictureBox();
-            pictureBox4 = new PictureBox();
-            pictureBox5 = new PictureBox();
-            pictureBox6 = new PictureBox();
-            pictureBox1 = new PictureBox();
-            pictureBox7 = new PictureBox();
-            labelScore = new Label();
             wall = new PictureBox();
             healthBar = new ProgressBar();
-            pictureBox8 = new PictureBox();
-            pictureBox9 = new PictureBox();
+            levelCleared = new Label();
+            levelLabel = new Label();
+            pictureBox7 = new PictureBox();
+            wallDef = new PictureBox();
+            killLabel = new Label();
             ((System.ComponentModel.ISupportInitialize)gunner).BeginInit();
             ((System.ComponentModel.ISupportInitialize)fence).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bullet).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)wallDef).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)wall).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)wallDef).BeginInit();
             SuspendLayout();
             // 
             // gunner
             // 
             gunner.BackColor = Color.Transparent;
             gunner.Image = Properties.Resources.shooting_instance_2;
-            gunner.Location = new Point(292, 403);
+            gunner.Location = new Point(251, 351);
+            gunner.Margin = new Padding(3, 2, 3, 2);
             gunner.Name = "gunner";
-            gunner.Size = new Size(67, 98);
+            gunner.Size = new Size(50, 70);
             gunner.SizeMode = PictureBoxSizeMode.StretchImage;
             gunner.TabIndex = 0;
             gunner.TabStop = false;
@@ -77,15 +68,17 @@
             // gameTimer
             // 
             gameTimer.Enabled = true;
+            gameTimer.Interval = 20;
             gameTimer.Tick += gameTimer_Tick;
             // 
             // fence
             // 
             fence.BackColor = Color.Transparent;
             fence.Image = Properties.Resources.w;
-            fence.Location = new Point(508, 334);
+            fence.Location = new Point(444, 264);
+            fence.Margin = new Padding(3, 2, 3, 2);
             fence.Name = "fence";
-            fence.Size = new Size(145, 75);
+            fence.Size = new Size(127, 59);
             fence.SizeMode = PictureBoxSizeMode.StretchImage;
             fence.TabIndex = 3;
             fence.TabStop = false;
@@ -95,9 +88,10 @@
             // 
             pictureBox2.BackColor = Color.Transparent;
             pictureBox2.Image = Properties.Resources.w;
-            pictureBox2.Location = new Point(24, 339);
+            pictureBox2.Location = new Point(21, 268);
+            pictureBox2.Margin = new Padding(3, 2, 3, 2);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(145, 75);
+            pictureBox2.Size = new Size(127, 59);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 4;
             pictureBox2.TabStop = false;
@@ -107,9 +101,10 @@
             // 
             pictureBox3.BackColor = Color.Transparent;
             pictureBox3.Image = Properties.Resources.w;
-            pictureBox3.Location = new Point(276, 335);
+            pictureBox3.Location = new Point(242, 264);
+            pictureBox3.Margin = new Padding(3, 2, 3, 2);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(117, 75);
+            pictureBox3.Size = new Size(102, 59);
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.TabIndex = 5;
             pictureBox3.TabStop = false;
@@ -119,104 +114,23 @@
             // 
             bullet.BackColor = Color.Transparent;
             bullet.Image = Properties.Resources.bullet;
-            bullet.Location = new Point(347, 445);
+            bullet.Location = new Point(302, 385);
+            bullet.Margin = new Padding(3, 2, 3, 2);
             bullet.Name = "bullet";
-            bullet.Size = new Size(90, 30);
+            bullet.Size = new Size(50, 12);
             bullet.SizeMode = PictureBoxSizeMode.StretchImage;
             bullet.TabIndex = 6;
             bullet.TabStop = false;
             bullet.Tag = "bullet";
             // 
-            // wallDef
-            // 
-            wallDef.BackColor = Color.Transparent;
-            wallDef.Image = Properties.Resources.wall_def;
-            wallDef.Location = new Point(391, 485);
-            wallDef.Name = "wallDef";
-            wallDef.Size = new Size(80, 80);
-            wallDef.SizeMode = PictureBoxSizeMode.StretchImage;
-            wallDef.TabIndex = 7;
-            wallDef.TabStop = false;
-            wallDef.Tag = "wallDef";
-            // 
-            // pictureBox4
-            // 
-            pictureBox4.BackColor = Color.Transparent;
-            pictureBox4.Image = Properties.Resources.wall_def;
-            pictureBox4.Location = new Point(391, 445);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(80, 80);
-            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox4.TabIndex = 8;
-            pictureBox4.TabStop = false;
-            pictureBox4.Tag = "wallDef";
-            // 
-            // pictureBox5
-            // 
-            pictureBox5.BackColor = Color.Transparent;
-            pictureBox5.Image = Properties.Resources.wall_def;
-            pictureBox5.Location = new Point(391, 405);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(80, 80);
-            pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox5.TabIndex = 9;
-            pictureBox5.TabStop = false;
-            pictureBox5.Tag = "wallDef";
-            // 
-            // pictureBox6
-            // 
-            pictureBox6.BackColor = Color.Transparent;
-            pictureBox6.Image = Properties.Resources.wall_def;
-            pictureBox6.Location = new Point(391, 363);
-            pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(80, 80);
-            pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox6.TabIndex = 10;
-            pictureBox6.TabStop = false;
-            pictureBox6.Tag = "wallDef";
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.Image = Properties.Resources.zombie_left;
-            pictureBox1.Location = new Point(1415, 363);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(69, 80);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 11;
-            pictureBox1.TabStop = false;
-            pictureBox1.Tag = "zombie";
-            // 
-            // pictureBox7
-            // 
-            pictureBox7.BackColor = Color.Transparent;
-            pictureBox7.Image = Properties.Resources.zombie_left;
-            pictureBox7.Location = new Point(1415, 485);
-            pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(69, 80);
-            pictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox7.TabIndex = 12;
-            pictureBox7.TabStop = false;
-            pictureBox7.Tag = "zombie";
-            // 
-            // labelScore
-            // 
-            labelScore.AutoSize = true;
-            labelScore.BackColor = Color.Transparent;
-            labelScore.Font = new Font("Britannic Bold", 27.75F, FontStyle.Regular, GraphicsUnit.Point);
-            labelScore.Location = new Point(522, 12);
-            labelScore.Name = "labelScore";
-            labelScore.Size = new Size(166, 41);
-            labelScore.TabIndex = 13;
-            labelScore.Text = "Score : 0";
-            // 
             // wall
             // 
             wall.BackColor = Color.Transparent;
-            wall.Image = Properties.Resources.wall_def;
-            wall.Location = new Point(756, 2);
+            wall.Image = Properties.Resources.erodaxia_summary;
+            wall.Location = new Point(662, 2);
+            wall.Margin = new Padding(3, 2, 3, 2);
             wall.Name = "wall";
-            wall.Size = new Size(48, 54);
+            wall.Size = new Size(42, 43);
             wall.SizeMode = PictureBoxSizeMode.StretchImage;
             wall.TabIndex = 14;
             wall.TabStop = false;
@@ -225,66 +139,99 @@
             // healthBar
             // 
             healthBar.ForeColor = Color.Green;
-            healthBar.Location = new Point(810, 15);
+            healthBar.Location = new Point(709, 12);
+            healthBar.Margin = new Padding(3, 2, 3, 2);
+            healthBar.Maximum = 1000;
             healthBar.Name = "healthBar";
-            healthBar.Size = new Size(161, 35);
+            healthBar.Size = new Size(124, 28);
             healthBar.TabIndex = 15;
             healthBar.Tag = "healthBar";
-            healthBar.Value = 100;
+            healthBar.Value = 1000;
             // 
-            // pictureBox8
+            // levelCleared
             // 
-            pictureBox8.BackColor = Color.Transparent;
-            pictureBox8.Image = Properties.Resources.zombie_left;
-            pictureBox8.Location = new Point(1340, 381);
-            pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(69, 80);
-            pictureBox8.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox8.TabIndex = 16;
-            pictureBox8.TabStop = false;
-            pictureBox8.Tag = "zombie";
+            levelCleared.AutoSize = true;
+            levelCleared.BackColor = Color.Transparent;
+            levelCleared.Font = new Font("Britannic Bold", 48F, FontStyle.Regular, GraphicsUnit.Point);
+            levelCleared.ForeColor = Color.White;
+            levelCleared.Location = new Point(514, 341);
+            levelCleared.Name = "levelCleared";
+            levelCleared.Size = new Size(525, 71);
+            levelCleared.TabIndex = 18;
+            levelCleared.Text = "Level 1 : Cleared!";
             // 
-            // pictureBox9
+            // levelLabel
             // 
-            pictureBox9.BackColor = Color.Transparent;
-            pictureBox9.Image = Properties.Resources.zombie_left;
-            pictureBox9.Location = new Point(1368, 436);
-            pictureBox9.Name = "pictureBox9";
-            pictureBox9.Size = new Size(69, 80);
-            pictureBox9.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox9.TabIndex = 17;
-            pictureBox9.TabStop = false;
-            pictureBox9.Tag = "zombie";
+            levelLabel.AutoSize = true;
+            levelLabel.BackColor = Color.Transparent;
+            levelLabel.Font = new Font("Britannic Bold", 21.75F, FontStyle.Regular, GraphicsUnit.Point);
+            levelLabel.ForeColor = Color.Black;
+            levelLabel.Location = new Point(12, 13);
+            levelLabel.Name = "levelLabel";
+            levelLabel.Size = new Size(122, 32);
+            levelLabel.TabIndex = 20;
+            levelLabel.Text = "Level : 1";
+            // 
+            // pictureBox7
+            // 
+            pictureBox7.BackColor = Color.Transparent;
+            pictureBox7.Image = Properties.Resources.zombie_left;
+            pictureBox7.Location = new Point(1247, 362);
+            pictureBox7.Name = "pictureBox7";
+            pictureBox7.Size = new Size(50, 70);
+            pictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox7.TabIndex = 22;
+            pictureBox7.TabStop = false;
+            pictureBox7.Tag = "zombie";
+            // 
+            // wallDef
+            // 
+            wallDef.BackColor = Color.Transparent;
+            wallDef.Image = Properties.Resources.erodaxia_summary;
+            wallDef.Location = new Point(359, 215);
+            wallDef.Name = "wallDef";
+            wallDef.Size = new Size(100, 291);
+            wallDef.SizeMode = PictureBoxSizeMode.StretchImage;
+            wallDef.TabIndex = 23;
+            wallDef.TabStop = false;
+            wallDef.Tag = "wallDef";
+            // 
+            // killLabel
+            // 
+            killLabel.AutoSize = true;
+            killLabel.BackColor = Color.Transparent;
+            killLabel.Font = new Font("Britannic Bold", 21.75F, FontStyle.Regular, GraphicsUnit.Point);
+            killLabel.ForeColor = Color.Black;
+            killLabel.Location = new Point(1145, 13);
+            killLabel.Name = "killLabel";
+            killLabel.Size = new Size(152, 32);
+            killLabel.TabIndex = 24;
+            killLabel.Text = "Zombie : 0";
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 19F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.level1_background;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1484, 561);
+            ClientSize = new Size(1351, 480);
+            Controls.Add(killLabel);
+            Controls.Add(wallDef);
             Controls.Add(pictureBox7);
-            Controls.Add(pictureBox9);
-            Controls.Add(pictureBox8);
+            Controls.Add(levelLabel);
+            Controls.Add(levelCleared);
             Controls.Add(healthBar);
             Controls.Add(wall);
-            Controls.Add(labelScore);
             Controls.Add(bullet);
-            Controls.Add(pictureBox1);
-            Controls.Add(wallDef);
             Controls.Add(gunner);
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);
             Controls.Add(fence);
-            Controls.Add(pictureBox4);
-            Controls.Add(pictureBox5);
-            Controls.Add(pictureBox6);
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 2, 3, 2);
             MaximizeBox = false;
-            MaximumSize = new Size(1484, 561);
             MinimizeBox = false;
-            MinimumSize = new Size(1484, 561);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
@@ -296,15 +243,9 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)bullet).EndInit();
-            ((System.ComponentModel.ISupportInitialize)wallDef).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)wall).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
+            ((System.ComponentModel.ISupportInitialize)wallDef).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -317,16 +258,12 @@
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;
         private PictureBox bullet;
-        private PictureBox wallDef;
-        private PictureBox pictureBox4;
-        private PictureBox pictureBox5;
-        private PictureBox pictureBox6;
-        private PictureBox pictureBox1;
-        private PictureBox pictureBox7;
-        private Label labelScore;
         private PictureBox wall;
         private ProgressBar healthBar;
-        private PictureBox pictureBox8;
-        private PictureBox pictureBox9;
+        private Label levelCleared;
+        private Label levelLabel;
+        private PictureBox pictureBox7;
+        private PictureBox wallDef;
+        private Label killLabel;
     }
 }

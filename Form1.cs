@@ -1,135 +1,211 @@
+using System;
+using System.Drawing;
+using System.Windows.Forms;
+
 namespace Duty_After_Coding
 {
     public partial class Form1 : Form
     {
-        //below are game variables
-        int score = 0;
+        // below are game variables
+        int kill = 0;
         bool isShooting;
-        int zombieSpeed = 5;
-        int gunnerSpeed = 30;
+        int zombieSpeed = 10;
+        int gunnerSpeed = 10;
         int bulletSpeed = 150;
+
         public Form1()
         {
             InitializeComponent();
         }
 
+        // controls when keys up, down and spacebar are pressed or held
         private void keyIsDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Up)
             {
+                // gunner will move up with the speed of 30
                 gunner.Top -= gunnerSpeed;
                 gunner.Image = Properties.Resources.shooting_instances;
 
-                if (gunner.Top <= 330)
+                // this code limits the gunner to go further
+                if (gunner.Top <= 270)
                 {
                     gunner.Top += gunnerSpeed;
-                    bullet.Top = gunner.Top + bullet.Width / 2;
                 }
             }
 
             if (e.KeyCode == Keys.Down)
             {
+                // gunner will move downward with the speed of 30
                 gunner.Top += gunnerSpeed;
                 gunner.Image = Properties.Resources.shooting_instances;
 
-                if (gunner.Top >= 470)
+                // this code also limits the gunner to go downward or further
+                if (gunner.Top >= 405)
                 {
                     gunner.Top -= gunnerSpeed;
-                    bullet.Top = gunner.Top + bullet.Width / 2;
                 }
             }
 
+            // this control is for shooting
             if (e.KeyCode == Keys.Space)
             {
                 isShooting = true;
                 bullet.Visible = true;
                 bullet.Left = gunner.Left;
                 bullet.Top = gunner.Top + bullet.Width / 2;
+                gunner.Image = Properties.Resources.shooting_instances;
+                isShooting = true;
             }
         }
+
+        // controls when keys up, down and spacebar are released
         private void keyIsUp(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Up)
-            {
-                gunner.Image = Properties.Resources.shooting_instance_2;
-            }
-            if (e.KeyCode == Keys.Down)
+            if (e.KeyCode == Keys.Up || e.KeyCode == Keys.Down)
             {
                 gunner.Image = Properties.Resources.shooting_instance_2;
             }
             if (e.KeyCode == Keys.Space)
             {
                 gunner.Image = Properties.Resources.shooting_instances;
-                isShooting = true;
             }
         }
 
-        public void shoot()
-        {
-            if (isShooting == true && bullet.Left <= 1500)
-            {
-                bullet.Left += bulletSpeed;
-                gunner.Image = Properties.Resources.shooting_instance_2;
-            }
-        }
-
+        // gameTimer
         private void gameTimer_Tick(object sender, EventArgs e)
         {
-            shoot();
+            Shoot();
             zombieMovement();
-            scoring();
+            wallBar();
+
+            if (!ZombiesExist())
+            {
+                RespawnZombies(5);
+            }
+        }
+
+        private void wallBar()
+        {
+            foreach (Control zombie in this.Controls)
+            {
+                if (zombie is PictureBox && (string)zombie.Tag == "zombie" && wallDef.Bounds.IntersectsWith(zombie.Bounds))
+                {
+                    if (healthBar.Value > healthBar.Minimum) // Check if value is greater than the minimum
+                    {
+                        healthBar.Value--;
+                        zombie.Left += zombieSpeed;
+
+                        if (healthBar.Value == 0)
+                        {
+                            wall.Visible = false; // Hide the wall image
+                            zombie.Left -= zombieSpeed;
+                        }
+                    }
+                    break; // Exit the loop after handling the first intersection
+                }
+            }
+        }
+
+
+        private bool ZombiesExist()
+        {
+            foreach (Control control in Controls)
+            {
+                if (control is PictureBox && (string)control.Tag == "zombie")
+                {
+                    return true; // At least one zombie exists
+                }
+            }
+            return false; // No zombies found
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             bullet.Visible = false;
+            levelCleared.Visible = false;
         }
 
-        public void zombieMovement()
+        // function for the movement of the zombies
+        private void zombieMovement()
         {
-            foreach (Control z in this.Controls)
+            foreach (Control zombie in this.Controls)
             {
-                if (z is PictureBox && (string)z.Tag == "zombie")
+                if (zombie is PictureBox && (string)zombie.Tag == "zombie")
                 {
-                    if (z.Left > gunner.Left)
+                    if (zombie.Left > gunner.Left)
                     {
-                        z.Left -= zombieSpeed;
+                        zombie.Left -= zombieSpeed;
                     }
-                    if (z.Left < gunner.Left)
+                    if (zombie.Left < gunner.Left)
                     {
-                        z.Left += zombieSpeed;
+                        zombie.Left += zombieSpeed;
                     }
-                    if (z.Top < gunner.Top)
+                    if (zombie.Top < gunner.Top)
                     {
-                        z.Top += zombieSpeed;
+                        zombie.Top += zombieSpeed;
                     }
-                    if (z.Top > gunner.Top)
+                    if (zombie.Top > gunner.Top)
                     {
-                        z.Top -= zombieSpeed;
+                        zombie.Top -= zombieSpeed;
+                    }
+                }
+
+                if (zombie is PictureBox && (string)zombie.Tag == "zombie")
+                {
+                    // Check collision with the gunner
+                    if (zombie.Bounds.IntersectsWith(gunner.Bounds))
+                    {
+                        // Game over condition
+                        Form3 form3 = new Form3();
+                        form3.ShowDialog();
+                        gameTimer.Stop(); // Stop the game timer
+
                     }
                 }
             }
         }
-        public void scoring()
-        {
-            foreach (Control z in this.Controls)
-            {
-                if (z is PictureBox && (string)z.Tag == "zombie")
-                {
-                    if (bullet.Bounds.IntersectsWith(z.Bounds))
-                    {
-                        bullet.Visible = false;
-                        z.Visible = false;
-                        score++;
-                        labelScore.Text = $"Score : {score}";
 
-                        Random random = new Random();
-                        int y = random.Next(this.ClientSize.Height / 2, this.ClientSize.Height - z.Height);
-                        int x = random.Next(1450, 1500);
-                        z.Location = new Point(x, y);
-                        z.Visible=true;
+        // Shooting function
+        public void Shoot()
+        {
+            if (isShooting && bullet.Left <= ClientSize.Width)
+            {
+                bullet.Left += bulletSpeed;
+                gunner.Image = Properties.Resources.shooting_instance_2;
+
+                // Check for collision with zombies
+                foreach (Control zombie in Controls)
+                {
+                    if (zombie is PictureBox && (string)zombie.Tag == "zombie" && bullet.Bounds.IntersectsWith(zombie.Bounds))
+                    {
+                        // Collision detected
+                        Controls.Remove(zombie); // Remove the zombie
+                        bullet.Visible = false; // Hide the bullet
+                        isShooting = false; // Stop shooting
+
+                        kill++;
+                        killLabel.Text = $"Kill: {kill}";
+
+                        break; // Exit the loop after handling the first collision
                     }
                 }
+            }
+        }
+
+        public void RespawnZombies(int numberOfZombies)
+        {
+            for (int i = 0; i < numberOfZombies; i++)
+            {
+                PictureBox zombie = new PictureBox();
+                zombie.Tag = "zombie";
+                zombie.BackColor = Color.Transparent;
+                zombie.Image = Properties.Resources.zombie_left;
+                zombie.SizeMode = PictureBoxSizeMode.StretchImage;
+                zombie.Size = new Size(50, 70);
+                zombie.Left = ClientSize.Width + (i * 100);
+                zombie.Top = gunner.Top;
+                this.Controls.Add(zombie);
             }
         }
     }

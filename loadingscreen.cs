@@ -21,7 +21,7 @@ namespace Duty_After_Coding
 
         private void loadingTimer_Tick(object sender, EventArgs e)
         {
-            panel2.Width += 10;
+            panel2.Width += 5;
             if (panel2.Width >= 282)
             {
                 loadingTimer.Stop();
