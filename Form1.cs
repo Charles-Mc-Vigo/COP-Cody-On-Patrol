@@ -9,7 +9,7 @@ namespace Duty_After_Coding
         // below are game variables
         int kill = 0;
         bool isShooting;
-        int zombieSpeed = 10;
+        int zombieSpeed = 1;
         int gunnerSpeed = 10;
         int bulletSpeed = 150;
 
@@ -157,8 +157,8 @@ namespace Duty_After_Coding
                     if (zombie.Bounds.IntersectsWith(gunner.Bounds))
                     {
                         // Game over condition
-                        Form3 form3 = new Form3();
-                        form3.ShowDialog();
+                        Form2 form3 = new Form2();
+                        form3.Show();
                         gameTimer.Stop(); // Stop the game timer
 
                     }
@@ -185,7 +185,47 @@ namespace Duty_After_Coding
                         isShooting = false; // Stop shooting
 
                         kill++;
+                        zombieSpeed++;
                         killLabel.Text = $"Kill: {kill}";
+                        if (kill == 10)
+                        {
+                            levelCleared.Text = "Level 1: Cleared!";
+                            levelLabel.Text = "Level 2: Kill 20 Zombies";
+                            levelCleared.Show();
+                            break;
+                        }
+                        if (kill == 20)
+                        {
+                            levelCleared.Text = "Level 2: Cleared!";
+                            levelLabel.Text = "Level 3: Kill 30 Zombies";
+                            levelCleared.Show();
+                            break;
+                        }
+                        if (kill == 30)
+                        {
+                            levelCleared.Text = "Level 3: Cleared!";
+                            levelLabel.Text = "Level 4: Kill 40 Zombies";
+                            levelCleared.Show();
+                            break;
+                        }
+                        if (kill == 40)
+                        {
+                            levelCleared.Text = "Level 4: Cleared!";
+                            levelLabel.Text = "Level 5: Kill 50 Zombies";
+                            levelCleared.Show();
+                            break;
+                        }
+                        if (kill == 50)
+                        {
+                            levelCleared.Text = "Level 5: Cleared!";
+                            levelLabel.Text = "Incredible!!1";
+                            levelCleared.Show();
+                            gameTimer.Stop();
+                            
+                            Form2 form2 = new Form2();
+                            form2.Show();
+                            break;
+                        }
 
                         break; // Exit the loop after handling the first collision
                     }

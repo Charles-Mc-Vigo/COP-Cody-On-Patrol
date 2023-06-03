@@ -68,7 +68,7 @@
             // gameTimer
             // 
             gameTimer.Enabled = true;
-            gameTimer.Interval = 20;
+            gameTimer.Interval = 50;
             gameTimer.Tick += gameTimer_Tick;
             // 
             // fence
@@ -88,7 +88,7 @@
             // 
             pictureBox2.BackColor = Color.Transparent;
             pictureBox2.Image = Properties.Resources.w;
-            pictureBox2.Location = new Point(21, 268);
+            pictureBox2.Location = new Point(131, 264);
             pictureBox2.Margin = new Padding(3, 2, 3, 2);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(127, 59);
@@ -101,7 +101,7 @@
             // 
             pictureBox3.BackColor = Color.Transparent;
             pictureBox3.Image = Properties.Resources.w;
-            pictureBox3.Location = new Point(242, 264);
+            pictureBox3.Location = new Point(251, 264);
             pictureBox3.Margin = new Padding(3, 2, 3, 2);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(102, 59);
@@ -141,22 +141,21 @@
             healthBar.ForeColor = Color.Green;
             healthBar.Location = new Point(709, 12);
             healthBar.Margin = new Padding(3, 2, 3, 2);
-            healthBar.Maximum = 1000;
             healthBar.Name = "healthBar";
             healthBar.Size = new Size(124, 28);
             healthBar.TabIndex = 15;
             healthBar.Tag = "healthBar";
-            healthBar.Value = 1000;
+            healthBar.Value = 100;
             // 
             // levelCleared
             // 
             levelCleared.AutoSize = true;
             levelCleared.BackColor = Color.Transparent;
-            levelCleared.Font = new Font("Britannic Bold", 48F, FontStyle.Regular, GraphicsUnit.Point);
+            levelCleared.Font = new Font("Britannic Bold", 36F, FontStyle.Regular, GraphicsUnit.Point);
             levelCleared.ForeColor = Color.White;
-            levelCleared.Location = new Point(514, 341);
+            levelCleared.Location = new Point(580, 58);
             levelCleared.Name = "levelCleared";
-            levelCleared.Size = new Size(525, 71);
+            levelCleared.Size = new Size(393, 53);
             levelCleared.TabIndex = 18;
             levelCleared.Text = "Level 1 : Cleared!";
             // 
@@ -164,13 +163,13 @@
             // 
             levelLabel.AutoSize = true;
             levelLabel.BackColor = Color.Transparent;
-            levelLabel.Font = new Font("Britannic Bold", 21.75F, FontStyle.Regular, GraphicsUnit.Point);
-            levelLabel.ForeColor = Color.Black;
+            levelLabel.Font = new Font("Britannic Bold", 27.75F, FontStyle.Regular, GraphicsUnit.Point);
+            levelLabel.ForeColor = Color.White;
             levelLabel.Location = new Point(12, 13);
             levelLabel.Name = "levelLabel";
-            levelLabel.Size = new Size(122, 32);
+            levelLabel.Size = new Size(424, 41);
             levelLabel.TabIndex = 20;
-            levelLabel.Text = "Level : 1";
+            levelLabel.Text = "Level  1: Kill 10 Zombies";
             // 
             // pictureBox7
             // 
@@ -201,7 +200,7 @@
             killLabel.AutoSize = true;
             killLabel.BackColor = Color.Transparent;
             killLabel.Font = new Font("Britannic Bold", 21.75F, FontStyle.Regular, GraphicsUnit.Point);
-            killLabel.ForeColor = Color.Black;
+            killLabel.ForeColor = Color.White;
             killLabel.Location = new Point(1145, 13);
             killLabel.Name = "killLabel";
             killLabel.Size = new Size(152, 32);
@@ -212,7 +211,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.level1_background;
+            BackgroundImage = Properties.Resources.secondBackgroung1;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1351, 480);
             Controls.Add(killLabel);
